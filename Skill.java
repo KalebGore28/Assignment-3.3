@@ -11,7 +11,7 @@ public abstract class Skill {
 	private final int skillLevel;
 
 	// Constructor
-	public Skill(String name, SkillEnum type, int skillLevel) {
+	protected Skill(String name, SkillEnum type, int skillLevel) {
 		this.name = name;
 		this.type = type;
 		// Ensure skillLevel is in between 1 and 10
