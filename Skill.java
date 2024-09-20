@@ -1,17 +1,11 @@
 public abstract class Skill {
-
-	// Enum for skill types. Ensures data integrity.
-	protected enum SkillEnum {
-		HARD, SOFT, GIFT, TALENT
-	}
-
 	// Attributes
 	private final String name;
-	private final SkillEnum type;
+	private final String type;
 	private final int skillLevel;
 
 	// Constructor
-	protected Skill(String name, SkillEnum type, int skillLevel) {
+	protected Skill(String name, String type, int skillLevel) {
 		this.name = name;
 		this.type = type;
 		// Ensure skillLevel is in between 1 and 10
@@ -26,7 +20,7 @@ public abstract class Skill {
 		return name;
 	}
 
-	public SkillEnum getType() {
+	public String getType() {
 		return type;
 	}
 
@@ -35,7 +29,5 @@ public abstract class Skill {
 	}
 
 	// Method to identify the skill
-	public void identifySkill() {
-		System.out.println(type + " Skill of " + name + " has a level of " + skillLevel);
-	}
+	public abstract void identifySkill();
 }
